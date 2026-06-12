@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Bento Portafolio</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 20px;
+      }
+
+      .bento {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+
+      .box {
+        background: #020617;
+        padding: 1.5rem;
+        border-radius: 1rem;
+      }
+
+      
+
+    </style>
+  </head>
+  <body>
+    <main class="bento">
+      <section class="box intro">
+        <h1>Hola, soy Tu Nombre 👋</h1>
+        <p>Desarrollador/a web</p>
+      </section>
+      <section class="box foto">🖼️</section>
+      <section class="box skills">
+        <h2>Skills</h2>
+        <p>HTML · CSS · JavaScript</p>
+      </section>
+      <section class="box proyecto">
+        <h2>Proyecto destacado</h2>
+        <p>Describe tu mejor proyecto en una frase.</p>
+      </section>
+      <section class="box frase">"Una cita que te inspire"</section>
+      <section class="box contacto">
+        <h2>Contacto</h2>
+        <p>tu@email.com</p>
+      </section>
+    </main>
+  </body>
+</html>
