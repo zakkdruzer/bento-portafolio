@@ -14,7 +14,12 @@
       body {
         margin: 0;
         font-family: system-ui, sans-serif;
-        background: #0f172a;
+        background: radial-gradient(
+          circle at top,
+          #1e293b 0,
+          #020617 50%,
+          #000 100%
+        );
         color: #e2e8f0;
         padding: 20px;
       }
@@ -35,10 +40,20 @@
         background: #020617;
         padding: 1.5rem;
         border-radius: 1rem;
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease;
+      }
+
+      .box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 40px rgba(0, 0, 0, 0.55);
       }
 
       .intro {
         grid-area: intro;
+        background: linear-gradient(135deg, #4f46e5, #22c55e);
       }
 
       .frase {
@@ -62,32 +77,55 @@
 
       .proyecto {
         grid-area: proyecto;
+        color: #38bdf8;
+        font-weight: 500;
+      }
+
+      .proyecto a:hover {
+        text-decoration: underline;
       }
 
       .contacto {
         grid-area: contacto;
+      }
+
+      .foto img {
+        width: 100%;
+        max-width: 140px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
       }
     </style>
   </head>
   <body>
     <main class="bento">
       <section class="box intro">
-        <h1>Hola, soy Tu Nombre 👋</h1>
-        <p>Desarrollador/a web</p>
+        <h1>Hola, soy José Ignacio Gajardo Soto / Zakkdruzer 👋</h1>
+        <p>Frontend developer en formación - Desarrollador/a web</p>
       </section>
-      <section class="box foto">🖼️</section>
+      <section class="box foto">
+        <img src="foto-perfil-reducida.jpg" alt="Foto de Zakkdruzer" />
+      </section>
       <section class="box skills">
         <h2>Skills</h2>
-        <p>HTML · CSS · JavaScript</p>
+        <p>HTML · CSS · JS · React · JQuery · Tailwind · Sass</p>
       </section>
       <section class="box proyecto">
         <h2>Proyecto destacado</h2>
-        <p>Describe tu mejor proyecto en una frase.</p>
+        <p>
+          Mini juego de aventuras en mazmorras creado con JavaScript, HTML y
+          CSS. Explora y combate monstruos en este emocionante juego de
+          navegador.
+          <a href="https://zakkdruzer.github.io/" target="_blank"
+            >Ver proyecto</a
+          >
+        </p>
       </section>
-      <section class="box frase">"Una cita que te inspire"</section>
+      <section class="box frase">"Solo muere quien en vida se rehúsa a seguir aprendiendo"</section>
       <section class="box contacto">
         <h2>Contacto</h2>
-        <p>tu@email.com</p>
+        <p>zakkdruzer@gmail.com</p>
       </section>
     </main>
   </body>
