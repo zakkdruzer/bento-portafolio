@@ -24,6 +24,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         grid-auto-rows: minmax(140px, auto);
+
+        grid-template-areas:
+          "intro  intro  foto"
+          "intro  intro  skills"
+          "proyecto frase  contacto";
       }
 
       .box {
@@ -33,15 +38,35 @@
       }
 
       .intro {
-        grid-column: span 2;
-        grid-row: span 2;
+        grid-area: intro;
       }
 
       .frase {
-        grid-column: 1 / -1;
+        grid-area: frase;
       }
 
-      
+      .foto,
+      .frase {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      .foto {
+        grid-area: foto;
+      }
+
+      .skills {
+        grid-area: skills;
+      }
+
+      .proyecto {
+        grid-area: proyecto;
+      }
+
+      .contacto {
+        grid-area: contacto;
+      }
     </style>
   </head>
   <body>
